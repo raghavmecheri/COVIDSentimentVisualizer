@@ -1,9 +1,5 @@
 # 🦠 Coronavirus (COVID-19) Effect Map
 
-Uses https://github.com/ExpDev07/coronavirus-tracker-api
-
-Jumpstart your next Gatsby mapping project with Leaflet!
-
 ## What This Includes
 * [Yarn](https://yarnpkg.com/en/)
 * [Gatsby](https://www.gatsbyjs.org/)
@@ -25,3 +21,6 @@ Jumpstart your next Gatsby mapping project with Leaflet!
 npm run dev
 ```
 * You should now be running the site locally
+
+# Credits
+This repository is a fork from [Colby Fayock's COVID-19 map](https://github.com/colbyfayock/coronavirus-map-dashboard) 
