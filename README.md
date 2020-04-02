@@ -1,4 +1,4 @@
-# 🦠 Coronavirus (COVID-19) Map Dashboard
+# 🦠 Coronavirus (COVID-19) Effect Map
 
 Uses https://github.com/ExpDev07/coronavirus-tracker-api
 
@@ -17,30 +17,11 @@ Jumpstart your next Gatsby mapping project with Leaflet!
 
 ## Requirements
 * [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)
-* [Yarn](https://yarnpkg.com/en/)
+* [Yarn](https://yarnpkg.com/en/) or [npm](https://www.npmjs.com/)
 
 ## Quick Start
-Run the following in your favorite terminal:
+* Navigate to your root directory and run:
 ```
-gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet
+npm run dev
 ```
-
-## Starting from Scratch
-* Set up Yarn: https://yarnpkg.com/lang/en/docs/install/#mac-stable)[https://yarnpkg.com/lang/en/docs/install/
-* Install the Gatsby CLI globally:
-```
-yarn global add gatsby-cli
-```
-* Inside the directory of your choice, scaffold a new Gatsby site:
-```
-gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet
-```
-For example, if I want my installation in `~/Code/new-gatsby-site`, I would navigate to `~/Code` and run:
-```
-gatsby new new-gatsby-site https://github.com/colbyfayock/gatsby-starter-leaflet
-```
-* Navigate to your new directory and run:
-```
-yarn develop
-```
-* You should now be running a new Gatsby site locally! 🎉
+* You should now be running the site locally
