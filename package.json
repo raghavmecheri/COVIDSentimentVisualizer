@@ -54,19 +54,7 @@
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write '**/*.js'",
     "lint": "eslint -c ./config/eslint.config.js . --ext .js",
     "start": "yarn develop",
-    "serve": "gatsby serve",
-    "test": "jest --config ./config/jest.config.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "yarn format",
-      "yarn lint"
-    ]
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",

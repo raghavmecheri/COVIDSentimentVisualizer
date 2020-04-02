@@ -16,6 +16,7 @@
 * [Yarn](https://yarnpkg.com/en/) or [npm](https://www.npmjs.com/)
 
 ## Quick Start
+* Ensure that you have a .env or a .env.development, with the key GATSBY_MAPBOX_KEY - if not, check [Mapbox]() out to get one
 * Navigate to your root directory and run:
 ```
 npm run dev
