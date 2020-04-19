@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_HOST = 'https://corona.lmao.ninja';
+const API_HOST = 'http://127.0.0.1:5000/';
 
 const ENDPOINTS = [
   {
-    id: 'all',
-    path: '/all',
-    isDefault: true
-  },
-  {
     id: 'countries',
-    path: '/countries'
+    path: '/api/fetchCOVIDData',
+    isDefault: true
   }
 ]
 
@@ -41,6 +37,7 @@ const useCoronavirusTracker = ({ api = 'all' }) => {
         }
       });
       response = await axios.get(`${API_HOST}${route.path}`);
+      console.log(response)
     } catch(e) {
       updateTracker((prev) => {
         return {

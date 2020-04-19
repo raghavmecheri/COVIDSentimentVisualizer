@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-leaflet",
-  "description": "A Gatsby starter with Leafet!",
-  "version": "0.2.2",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "name": "covid-19-sentiment",
+  "description": "A tool to visuliase the impact of COVID19 on the human spirit",
+  "version": "0.0.1",
   "dependencies": {
     "axios": "^0.19.2",
     "countries-list": "^2.5.4",
@@ -58,9 +57,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/gatsby-starter-leaflet"
-  },
-  "bugs": {
-    "url": "https://github.com/colbyfayock/gatsby-starter-leaflet/issues"
+    "url": "https://github.com/raghavmecheri/oronavirus-effect-map"
   }
 }

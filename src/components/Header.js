@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Container type="content">
-        <h1>Coronavirus (COVID-19)</h1>
+        <h1>COVID Sentiment</h1>
         <ul>
           <li>
             <a href="https://github.com/raghavmecheri/coronavirus-effect-map">

@@ -16,7 +16,7 @@ const Layout = ({ children, pageName }) => {
   return (
     <>
       <Helmet bodyAttributes={{ class: className }}>
-        <title>Gatsby Site</title>
+        <title>COVID 19 Sentiment</title>
       </Helmet>
       <div className="wrapper">
         <Header />

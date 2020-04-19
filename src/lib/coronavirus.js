@@ -60,8 +60,8 @@ export function trackerFeatureToHtmlMarker({ properties = {} } = {}) {
     updated,
     flag,
     cases,
-    deaths,
-    recovered
+    extreme,
+    mild
   } = properties
 
   let casesString = `${cases}`;
@@ -75,9 +75,9 @@ export function trackerFeatureToHtmlMarker({ properties = {} } = {}) {
       <span class="icon-marker-tooltip">
         <h2>${flag} ${country}</h2>
         <ul>
-          <li><strong>Confirmed:</strong> ${cases}</li>
-          <li><strong>Deaths:</strong> ${deaths}</li>
-          <li><strong>Recovered:</strong> ${recovered}</li>
+          <li><strong>Negative Tweets:</strong> ${cases}</li>
+          <li><strong>Strongly Negative:</strong> ${extreme}</li>
+          <li><strong>Weakly Negative:</strong> ${mild}</li>
           <li><strong>Last Update:</strong> ${updated}</li>
         </ul>
       </span>
