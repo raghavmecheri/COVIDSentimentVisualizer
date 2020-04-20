@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_HOST = 'http://127.0.0.1:5000/';
+const API_HOST = 'https://covidsentiment.herokuapp.com/';
 
 const ENDPOINTS = [
   {

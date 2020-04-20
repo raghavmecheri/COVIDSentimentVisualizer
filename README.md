@@ -10,6 +10,8 @@
 * [React Leaflet](https://react-leaflet.js.org)
 
 # Getting Started
+* Live on: https://covidsentiment.netlify.app/
+* Dependant on data from: https://covidsentiment.herokuapp.com/
 
 ## Requirements
 * [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)
