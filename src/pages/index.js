@@ -91,7 +91,7 @@ const IndexPage = () => {
       <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
-        <h2>We're mapping the mental health effects of social isolation</h2>
+        <h2>Mapping the mental health effects of social isolation</h2>
         <ul>
           <li>
             Uses <a href="https://github.com/ExpDev07/coronavirus-tracker-api">github.com/ExpDev07/coronavirus-tracker-api</a> via <a href="https://coronavirus-tracker-api.herokuapp.com/">coronavirus-tracker-api.herokuapp.com</a>
