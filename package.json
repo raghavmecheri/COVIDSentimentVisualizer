@@ -54,7 +54,7 @@
     "dev": "gatsby develop",
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write '**/*.js'",
     "lint": "eslint -c ./config/eslint.config.js . --ext .js",
-    "start": "yarn develop",
+    "start": "gatsby build",
     "serve": "gatsby serve"
   },
   "repository": {
