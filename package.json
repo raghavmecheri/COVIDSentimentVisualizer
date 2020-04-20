@@ -53,6 +53,7 @@
     "heroku-postbuild": "gatsby build",
     "clean": "gatsby clean",
     "dev": "gatsby develop",
+    "start": "npm run develop",
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write '**/*.js'",
     "lint": "eslint -c ./config/eslint.config.js . --ext .js",
     "serve": "gatsby serve"
