@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
     "chartjs": "^0.3.24",
     "countries-list": "^2.5.4",
     "gatsby": "^2.19.43",
@@ -20,6 +21,7 @@
     "react": "^16.13.0",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.0",
+    "react-dropdown": "^1.7.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.9.0",
     "react-leaflet": "^2.6.3"

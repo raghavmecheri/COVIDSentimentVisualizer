@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Helmet from 'react-helmet';
 import L from 'leaflet';
+import { Line } from 'react-chartjs-2';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 import { promiseToFlyTo, geoJsonToMarkers, clearMapLayers } from 'lib/map';
 import { trackerLocationsToGeoJson, trackerFeatureToHtmlMarker } from 'lib/coronavirus';
@@ -9,6 +12,7 @@ import { useCoronavirusTracker } from 'hooks';
 import Layout from 'components/Layout';
 import Container from 'components/Container';
 import Map from 'components/Map';
+import LineData from 'data/mocks/chart-data'
 
 const LOCATION = {
   lat: 0,
@@ -55,6 +59,7 @@ const IndexPage = () => {
     const { target = {} } = event;
     const { _map: map = {} } = target;
 
+
     const { geometry = {}, properties = {} } = feature;
     const { coordinates } = geometry;
     const { countryBounds, countryCode } = properties;
@@ -82,6 +87,9 @@ const IndexPage = () => {
     mapEffect
   };
 
+  const optionList = LineData["options"]
+  const [option, setOption] = useState(optionList[0]);
+
   return (
     <Layout pageName="home">
       <Helmet>
@@ -92,6 +100,17 @@ const IndexPage = () => {
 
       <Container type="content" className="text-center home-start">
         <h2>Mapping the mental health effects of social isolation</h2>
+        <div>
+          <h3>How are people feeling right now?</h3>
+          <Line data={LineData["aggregate"]} />
+        </div>
+        <div>
+          <h3>How are people in individual countries feeling right now?</h3>
+          <Dropdown options={optionList} onChange={(selection) => setOption(selection.value)} value={option} placeholder="Select an option" />
+          <h4>{option}</h4>
+          <Line data={LineData["breakup"][option]} />
+        </div>
+        
         <ul>
           <li>
             Uses <a href="https://github.com/ExpDev07/coronavirus-tracker-api">github.com/ExpDev07/coronavirus-tracker-api</a> via <a href="https://coronavirus-tracker-api.herokuapp.com/">coronavirus-tracker-api.herokuapp.com</a>
