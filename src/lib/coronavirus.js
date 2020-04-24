@@ -57,17 +57,23 @@ export function trackerLocationsToGeoJson(locations = []) {
 export function trackerFeatureToHtmlMarker({ properties = {} } = {}) {
   const {
     country,
-    updated,
+    anxious,
     flag,
-    cases,
-    extreme,
-    mild
+    tweets,
+    frustrated,
+    happy,
+    sad
   } = properties
 
-  let casesString = `${cases}`;
+  let tweetString = `${tweets}`;
 
-  if ( cases > 1000 ) {
-    casesString = `${casesString.slice(0, -3)}k+`
+  let happyColor = happy >= 0 ? "#4F8F00" : "#F2000D"
+  let sadnessColor = sad >= 0 ? "#F2000D": "#4F8F00"
+  let anxiousColor = anxious >= 0 ? "#F2000D": "#4F8F00"
+  let frustrationColor = frustrated >= 0 ? "#F2000D": "#4F8F00"
+
+  if ( tweets > 1000 ) {
+    tweetString = `${tweetString.slice(0, -3)}k+`
   }
 
   return `
@@ -75,13 +81,13 @@ export function trackerFeatureToHtmlMarker({ properties = {} } = {}) {
       <span class="icon-marker-tooltip">
         <h2>${flag} ${country}</h2>
         <ul>
-          <li><strong>Negative Tweets:</strong> ${cases}</li>
-          <li><strong>Strongly Negative:</strong> ${extreme}</li>
-          <li><strong>Weakly Negative:</strong> ${mild}</li>
-          <li><strong>Last Update:</strong> ${updated}</li>
+          <li style=\"color:${happyColor};\"><strong>Happniess Change:</strong> ${happy}%</li>
+          <li style=\"color:${sadnessColor};\"><strong>Sadness Change:</strong> ${sad}%</li>
+          <li style=\"color:${anxiousColor};\"><strong>Anxious Change:</strong> ${anxious}%</li>
+          <li style=\"color:${frustrationColor};\"><strong>Frustrated Change:</strong> ${frustrated}%</li>
         </ul>
       </span>
-      ${ casesString }
+      ${ tweetString }
     </span>
   `;
 }
